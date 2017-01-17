@@ -1,4 +1,4 @@
-# [Cd library management system](https://html5boilerplate.com)
+# [Cd library management system](https://github.com/technophilic/CD-Library/)
 
 ## Features:
 * Our project tries to reduce the work of a
@@ -14,7 +14,7 @@
   
 ## Source :
 
-* Source code can be found  [here](https://github.com/h5bp/html5-boilerplate) .
+* Source code can be found  [here](https://github.com/technophilic/CD-Library) .
 
 ## Project Structure :
 <pre>
