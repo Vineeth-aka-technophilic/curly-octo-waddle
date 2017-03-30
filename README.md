@@ -11,10 +11,10 @@
   time taken for calculation and space for
   storing data. It also provides periodic
   reports.
-  
+
 ## Source :
 
-* Source code can be found  [here](https://github.com/technophilic/CD-Library) .
+* Source code can be found  [here](https://raw.githubusercontent.com/technophilic/CD-Library/master/FINAL.CPP?token=AQV-olCb9Ywijg2v5s28AP5lElhWfHVAks5Y5levwA%3D%3D) .
 
 ## Project Structure :
 <pre>
@@ -63,9 +63,9 @@ Private members:
     * edit (): This function allows users to edit their profile once logged in into their respective accounts.
 
 ### Class music:
-    
+
 This class stores the records of different CD’s including cd name , ratings etc.
-    
+
     * accept (): accepts the details of the cd.
     * display (): displays the details of the cd.
     * obtain (): This function is to obtain the total number of users and total number of CD’s at the start of the program in background.
