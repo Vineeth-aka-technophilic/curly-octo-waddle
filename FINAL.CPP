@@ -1,12 +1,15 @@
-#include<iostream.h>
+#include<iostream>
 #include<ctype.h>
 #include<conio.h>
 #include<stdio.h>
 #include<stdlib.h>
 #include<process.h>
-#include<string.h>
-#include<fstream.h>
-#include<iomanip.h>
+#include<cstring>
+#include<fstream>
+#include<iomanip>
+
+using namespace std;
+
 int n=0;
 int m=0;
 
@@ -140,7 +143,7 @@ private:
 	char temp1[20],temp2[20],pin[20];
 
 
-		int validate(char,char*);  //prototype for form validation
+		int validate(char,char*);   //prototype for form validation
 		void generate();            //prototype for generating uid
 		void passgen();             //prototype for generating pin
 		date dob;
@@ -212,7 +215,7 @@ public:
 	 }
 	 cout<<"\t\t\tEnter date of birth :";
 	 dob.accept();
-	 clrscr();
+	 system("cls");
 	 generate();
 	 master.profit(500,name,'r');
 	 getch();
@@ -237,7 +240,7 @@ public:
 
 }s;
 		 /*------------------------------------------------------
-			Function enables short hand notations in code
+					Function enables short hand notations in code
 		 ------------------------------------------------------*/
 
 char* store::expand(char ch)
@@ -253,8 +256,8 @@ char* store::expand(char ch)
 		return "[~~NULL~~]";
 		}
 		/*------------------------------------------------------
-			      Function for form validation
-				  during registration
+			      			Function for form validation
+				  						during registration
 		 ------------------------------------------------------*/
 
 int store::validate(char ch,char *a)
@@ -328,8 +331,8 @@ int store::validate(char ch,char *a)
       }
 }
 	  /*------------------------------------------------------
-		 Function for display/accepting user details
-			while validating the form
+		 				Function for display/accepting user details
+										while validating the form
 	   ------------------------------------------------------*/
 
 
@@ -344,7 +347,7 @@ void store::acceptpart(char ch)
      }
      else
      f=1;
-     clrscr();
+     system("cls");
      cout<<"\t\t  "<<"________________________________________"<<endl;
      cout<<endl<<"\t\t  "<<"          REGISTRATION PORTAL"<<endl;
      cout<<"\t\t  "<<"________________________________________"<<endl<<endl;
@@ -394,7 +397,7 @@ void store::acceptpart(char ch)
 
 
       /*------------------------------------------------------
-	   Function for calculating no.of days btw two dates
+	   			Function for calculating no.of days btw two dates
        ------------------------------------------------------*/
 int store::diff(date a,date b)
 	{
@@ -413,7 +416,7 @@ int store::diff(date a,date b)
 		  else
 		  leap=1;
 		}
-	    ydays=365+leap;      //no.of days obtained with correction
+	    ydays=365+leap;      		//no.of days obtained with correction
 	    mdays=0;
 	    if(leap)
 	    {
@@ -454,7 +457,7 @@ int store::diff(date a,date b)
 }
 
       /*------------------------------------------------------
-		 Function for editing user detatils
+		 							Function for editing user detatils
        ------------------------------------------------------*/
 
 
@@ -464,7 +467,7 @@ void store::edit()
 	while(1)
 	{ ctr=1;
 	  ch='a';
-	  clrscr();
+	  system("cls");
 	  cout<<"\t\t  "<<"________________________________________"<<endl;
 	  cout<<endl<<"\t\t\t      "<<"Edit your profile !!"<<endl;
 	  cout<<"\t\t  "<<"________________________________________"<<endl<<endl;
@@ -498,7 +501,7 @@ void store::edit()
 		  }
 		  if(ctr==1)
 		  {
-		  clrscr();
+		  system("cls");
 		  cout<<"\t\t  "<<"________________________________________"<<endl;
 		  cout<<endl<<"\t\t\t      "<<"Edit your profile !!"<<endl;
 		  cout<<"\t\t  "<<"________________________________________"<<endl<<endl;
@@ -516,7 +519,7 @@ void store::edit()
 		  }
 		  if(ctr==2)
 		  {
-		  clrscr();
+		  system("cls");
 		  cout<<"\t\t  "<<"________________________________________"<<endl;
 		  cout<<endl<<"\t\t\t      "<<"Edit your profile !!"<<endl;
 		  cout<<"\t\t  "<<"________________________________________"<<endl<<endl;
@@ -534,7 +537,7 @@ void store::edit()
 		  }
 		  if(ctr==3)
 		  {
-		  clrscr();
+		  system("cls");
 		  cout<<"\t\t  "<<"________________________________________"<<endl;
 		  cout<<endl<<"\t\t\t      "<<"Edit your profile !!"<<endl;
 		  cout<<"\t\t  "<<"________________________________________"<<endl<<endl;
@@ -552,7 +555,7 @@ void store::edit()
 		  }
 		  if(ctr==4)
 		  {
-		  clrscr();
+		  system("cls");
 		  cout<<"\t\t  "<<"________________________________________"<<endl;
 		  cout<<endl<<"\t\t\t      "<<"Edit your profile !!"<<endl;
 		  cout<<"\t\t  "<<"________________________________________"<<endl<<endl;
@@ -569,7 +572,7 @@ void store::edit()
 		  cout<<"\t        Done              "<<endl;
 		  }
 		  if(ctr==5)
-		  {clrscr();
+		  {system("cls");
 		  cout<<"\t\t  "<<"________________________________________"<<endl;
 		  cout<<endl<<"\t\t\t      "<<"Edit your profile !!"<<endl;
 		  cout<<"\t\t  "<<"________________________________________"<<endl<<endl;
@@ -587,7 +590,7 @@ void store::edit()
 		  }
 		  if(ctr==6)
 		  {
-		  clrscr();
+		  system("cls");
 		  cout<<"\t\t  "<<"________________________________________"<<endl;
 		  cout<<endl<<"\t\t\t      "<<"Edit your profile !!"<<endl;
 		  cout<<"\t\t  "<<"________________________________________"<<endl<<endl;
@@ -605,7 +608,7 @@ void store::edit()
 		  }
 		  if(ctr==7)
 		  {
-		  clrscr();
+		  system("cls");
 		  cout<<"\t\t  "<<"________________________________________"<<endl;
 		  cout<<endl<<"\t\t\t      "<<"Edit your profile !!"<<endl;
 		  cout<<"\t\t  "<<"________________________________________"<<endl<<endl;
@@ -623,58 +626,58 @@ void store::edit()
 		  }
 
 		}      //end of while ch!=13
-	      //	int exit=0;
+	      	 //	int exit=0;
 		if(ctr==1)
 		{
-		clrscr();
+		system("cls");
 		cout<<"Enter your name          :";
 		gets(name);
 		}
 		else if(ctr==2)
 		{
-		clrscr();
+		system("cls");
 		cout<<"Enter your address       :";
 		gets(address);
 		}
 		else if(ctr==3)
 		{
-		clrscr();
+		system("cls");
 		cout<<"Enter your email address :";
 		gets(eid);
 		}
 		else if(ctr==4)
 		{
-		clrscr();
+		system("cls");
 		passgen();
 		}
 		else if(ctr==5)
 		{
-		clrscr();
+		system("cls");
 		cout<<"Enter your phone number  :";
 		gets(phno);
 		}
 		else if(ctr==6)
 		{
-		clrscr();
+		system("cls");
 		dob.accept();
 		}
 		else if(ctr==7)
 		{
-		clrscr();
+		system("cls");
 		return;
 		}
 
 
 
-	}       //end of while(1)
+	}       			//end of while(1)
     }           //end of edit
      /*------------------------------------------------------
-		 Function for generating user id (uid)
+		 					Function for generating user id (uid)
        ------------------------------------------------------*/
 
 
 void store::generate()
-	{  clrscr();
+	{  system("cls");
 	   cout<<"\t\t  "<<"_____________________________________________"<<endl;
 	   cout<<endl<<"\t\t\t  "<<"Your user name has been created !!"<<endl;
 	   cout<<"\t\t  "<<"_____________________________________________"<<endl;
@@ -683,7 +686,8 @@ void store::generate()
 	   for(int i=0;i<3;i++)
 		uid[i]=name[i];
 
-	   for(int j=3;j<=9;j++)
+		int j;
+	   for(j=3;j<=9;j++)
 		uid[j]=phno[j];
 	   uid[j]='\0';
 	 cout<<"your user id is :"<<uid;
@@ -699,15 +703,16 @@ void store::passgen()
     while(!flag)
     { // Enter password
       cout<<"\t\t\tEnter 5 digit pin   : ";
-      for(int i=0;i<5;i++)
+			int i;
+			for(i=0;i<5;i++)
       {
       temp1[i]=getch();
       if((int)temp1[i]==8)        ////////////////////////////////////////
       {                           // This statement gives compatability //
-	if(i>0)                   //          for backspaces            //
-	{                         ////////////////////////////////////////
+	if(i>0)                   			//          for backspaces            //
+	{                       			  ////////////////////////////////////////
 	 cout<<"\b \b";
-	 i--;             // To delete the previous charachter
+	 i--;             			// To delete the previous charachter
 	}
       i--;                // Cursor must not be moved if backspace is entered
       }
@@ -724,10 +729,10 @@ void store::passgen()
 
       if((int)temp2[i]==8)        ////////////////////////////////////////
       {                           // This statement gives compatability //
-	if(i>0)                   //          for backspaces            //
-	{                         ////////////////////////////////////////
+	if(i>0)                   			//          for backspaces            //
+	{                         			////////////////////////////////////////
 	 cout<<"\b \b";
-	 i--;             // To delete the previous charachter
+	 i--;             			// To delete the previous charachter
 	}
       i--;                // Cursor must not be moved if backspace is entered
       }
@@ -739,7 +744,7 @@ void store::passgen()
 
 
    //if passwords match continue else quit
-   if(strcmpi(temp1,temp2)==0)
+   if(strcmp(temp1,temp2)==0)
    {
    flag=1;
    cout<<endl<<"\t\t\t"<<"password match"<<endl;
@@ -820,13 +825,13 @@ void music::accept()
     }
    for(int i=1;i<=old;i++)
    cout<<"\b\b \b";
-   for(i=1;i<=ctr;i++)
+   for(int i=1;i<=ctr;i++)
    cout<<"\3 ";
   }
   rating=ctr;
   cout<<"\nEnter the price of the cd     :";
   cin>>cost;
-  cout<<"\nAny comments ?? (y/n)         :";
+  cout<<"\nAny comments ? (y/n)         :";
   cin>>cflag;
   if(cflag=='y')
   {
@@ -838,6 +843,7 @@ void music::accept()
 void music::display()
 //FUNCTION TO DISPLAY SONG DETAILS
 {
+	int i;
   cout<<"\nDISPLAYING SONG DETAILS"<<endl;
   cout<<  "SONG TITLE     : ";
   puts(s);
@@ -848,18 +854,18 @@ void music::display()
   cout<<"\nGENRE          : ";
   puts(genre);
   cout<<"\nRATING         : ";
-  for(int i=0;i<rating;i++)
+  for(i=0;i<rating;i++)
   cout<<"\3 ";
   cout<<"( "<<i<<" stars )";
   cout<<"\nYEAR           : ";
   cout<<year;
   cout<<"\nCOST           : ";
+  cout<<cost;
   if(cflag=='y')
   {
   cout<<"\nCOMMENTS       : ";
   puts(comments);
   }
-  getch();
 }
 //                       *** End of Class definition ***
 /*_______________________________~~~for music~~~___________________________
@@ -906,11 +912,11 @@ a.close();
 void mask(char* a,char f='n',int flag=1,int del=0)
 {  if(flag==1)
    {int l=strlen(a);
-    if(l<=15)                             /////////////////////////////////////
-    {cout<<"\t\t\t|"<<a;                  //   Note :-                       //
-     for(int i=1;i<=15-l;i++)             //                                 //
-     cout<<" ";                           //  1. a is the 2-D arrray which   //
-     cout<<"|";                           //                                 //
+    if(l<=15)
+    {cout<<"\t\t\t|"<<a;                  /////////////////////////////////////
+     for(int i=1;i<=15-l;i++)             //   Note :-                       //
+     cout<<" ";                           //                                 //
+     cout<<"|";                           //  1. a is the 2-D arrray which   //
      if(f=='y')                           //     contains the sorted array   //
      cout<<" \t<====     |\n";            //     having search instants.     //
      else                                 //                                 //
@@ -975,14 +981,14 @@ void delstring(char a[50][50],char* ele,int &n)
  }
  for(int i=0;i<n;i++)
  {
-  if(strcmpi(a[i],ele)==0)
+  if(strcmp(a[i],ele)==0)
   {pos=i;
    f++;
   }
   if(f!=0)
   break;
  }
- for(i=pos;i<(n-1);i++)
+ for(int i=pos;i<(n-1);i++)
  strcpy(a[i],a[i+1]);
  n--;
 }
@@ -1021,10 +1027,10 @@ void rewrite(store x,int pos)
   }
 }
 /*____________________________________________________________________________
-  ____________________________________________________________________________
+  ____________________________________________________________________________*/
 
 	    /*-----------------------------------------------------
-				 Search Engine
+				 										Search Engine
 	    -----------------------------------------------------*/
 char ret;
 int f;
@@ -1102,7 +1108,7 @@ char temp[50];
   // ~~~~Bsort
   for(int i=0; i<ctr1; i++)
   { for(int j=0; j<ctr1-1-i; j++)
-     { if(strcmpi(result[j],result[j+1])>0)
+     { if(strcmp(result[j],result[j+1])>0)
        { strcpy(temp,result[j]);
 	strcpy(result[j],result[j+1]);
 	strcpy(result[j+1],temp);
@@ -1122,7 +1128,7 @@ char temp[50];
   int ctrg=0;                       //counter for gui
   if(ctr1>=1)
   {
-  clrscr();
+  system("cls");
   cout<<"\t\t  "<<"    ________________________________________"<<endl;
   cout<<endl<<"\t\t\t          "<<search<<"_"<<endl;
   cout<<"\t\t  "<<"    ________________________________________"<<endl<<endl;
@@ -1196,7 +1202,7 @@ char temp[50];
 		 }
 
 
-	      clrscr();
+	      system("cls");
 	      cout<<"\t\t  "<<"    ________________________________________"<<endl;
 	      cout<<endl<<"\t\t\t          "<<search<<"_"<<endl;
 	      cout<<"\t\t  "<<"    ________________________________________"<<endl<<endl;
@@ -1225,13 +1231,13 @@ char temp[50];
 		      if(u=='u')
 			mask(result[i],'y');
 		      if(u=='a')
-		       {             //to avoid incrementation of already initialised array wiht the current option
+		       {             			//to avoid incrementation of already initialised array wiht the current option
 
 			 for(int j=0;j<delctr;j++)
 			 {
 
 			   reverse=delflag;
-			   if(strcmpi(del[j],result[i])==0)  //if song is already marked
+			   if(strcmp(del[j],result[i])==0)  //if song is already marked
 			   {
 			    delflag=1;
 			    if(reverse==delflag)
@@ -1269,7 +1275,7 @@ char temp[50];
 
 		    for(int j=0;j<delctr;j++)
 			 {
-			  if(strcmpi(del[j],result[i])==0)
+			  if(strcmp(del[j],result[i])==0)
 			  {
 			  flg=1;
 			  break;
@@ -1305,7 +1311,7 @@ char temp[50];
 		    a.read((char*)&temp1,sizeof(temp1));
 		    if(a.eof()==1)
 		    break;
-		    if( strcmpi(temp1.s,result[tracker])==0)
+		    if( strcmp(temp1.s,result[tracker])==0)
 		    {
 		    strcpy(mreturn,temp1.s);
 		    master.profit(temp1.cost,temp1.s,'h');
@@ -1324,7 +1330,11 @@ char temp[50];
 	     fstream a,b;
 	     a.open("music.dat",ios::binary|ios::in);
 	     b.open("temp.dat",ios::binary|ios::out);
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	     cout<<"The reqested songs to be deleted:\n";
 	     dplay(del,delctr);
+	     getch();
 	     while(!a.eof())
 	     {
 	      a.read((char*)&xtemp,sizeof(xtemp));
@@ -1334,7 +1344,7 @@ char temp[50];
 	      {
 	       for(int i=0;i<delctr;i++)
 	       {
-		if(strcmpi(del[i],xtemp.s)==0)
+		if(strcmp(del[i],xtemp.s)==0)
 		{
 		xflag=1;
 		}
@@ -1366,17 +1376,17 @@ char temp[50];
 
 }
 /*____________________________________________________________________________
-  ____________________________________________________________________________
+  ____________________________________________________________________________*/
 
 	    /*-----------------------------------------------------
-		 Function to perform tasks on existing users
+		 				Function to perform tasks on existing users
 	    -----------------------------------------------------*/
 
 void existing(char* id,char* pass)
-{       char ch,sch[50],borrow[50];
+{       char sch[50];
 	store temp;
 	int flag=0;
-	clrscr();
+	system("cls");
 	fstream a;
 	a.open("users.dat",ios::binary|ios::in);
 
@@ -1390,7 +1400,7 @@ void existing(char* id,char* pass)
 		a.close();
 		return;
 		}
-	if(( strcmpi(temp.retuid(),id)==0)&&(strcmp(temp.retpin(),pass)==0))
+	if(( strcmp(temp.retuid(),id)==0)&&(strcmp(temp.retpin(),pass)==0))
 	  while(1)
 	  {char ch;
 	   int choice,ctr=1,choice1,ctr1=1;
@@ -1398,7 +1408,7 @@ void existing(char* id,char* pass)
 	    temp.display();
 
 		ch='a';  //This can be any thing except ch=13 (ascii value)
-		clrscr();
+		system("cls");
 		cout<<"\t\t  "<<"________________________________________"<<endl;
 		cout<<endl<<"\t\t\t  "<<"Welcome\t"<<temp.retname()<<" !!"<<endl;
 		cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1425,7 +1435,7 @@ void existing(char* id,char* pass)
 		    ctr++;
 		  }
 		  if(ctr==1)
-		   { clrscr();
+		   { system("cls");
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
 		     cout<<endl<<"\t\t\t  "<<"Welcome\t"<<temp.retname()<<" !!"<<endl;
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1436,7 +1446,7 @@ void existing(char* id,char* pass)
 		     cout<<"4. Log out                   "<<endl;
 		   }
 		  if(ctr==2)
-		   { clrscr();
+		   { system("cls");
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
 		     cout<<endl<<"\t\t\t  "<<"Welcome\t"<<temp.retname()<<" !!"<<endl;
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1448,7 +1458,7 @@ void existing(char* id,char* pass)
 
 		   }
 		  if(ctr==3)
-		   { clrscr();
+		   { system("cls");
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
 		     cout<<endl<<"\t\t\t  "<<"Welcome\t"<<temp.retname()<<" !!"<<endl;
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1459,7 +1469,7 @@ void existing(char* id,char* pass)
 		     cout<<"4. Log out                   "<<endl;
 		   }
 		  if(ctr==4)
-		   { clrscr();
+		   { system("cls");
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
 		     cout<<endl<<"\t\t\t  "<<"Welcome\t"<<temp.retname()<<" !!"<<endl;
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1476,8 +1486,8 @@ void existing(char* id,char* pass)
 
 	    if(choice==1)
 	    {
-	     if(strcmpi("[~~NULL~~]",temp.borrow)==0)
-	     {	 clrscr();
+	     if(strcmp("[~~NULL~~]",temp.borrow)==0)
+	     {	 system("cls");
 		 int c1=0;
 		 cout<<"\t\t  "<<"________________________________________"<<endl;
 		 cout<<endl<<"\t\t\t      "<<"start your search:"<<endl;
@@ -1489,7 +1499,7 @@ void existing(char* id,char* pass)
 		 sch[c1]=ch;
 
 		 while(1)
-		 {clrscr();
+		 {system("cls");
 		  c1++;
 		  sch[c1]='\0';
 		  cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1505,7 +1515,7 @@ void existing(char* id,char* pass)
 		  c1-=2;
 		  }
 		  else if(f==1)
-		  { clrscr();
+		  { system("cls");
 
 		   strcpy(temp.borrow,mreturn);
 		   cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1533,7 +1543,7 @@ void existing(char* id,char* pass)
 	    }
 	    else if(choice==2)
 	    {                     char rep='n';
-				  clrscr();
+				  system("cls");
 				  cout<<"\n\n";
 				  cout<<"              DETAILS OF THE LAST CD HIRED :             "<<endl;
 				  cout<<"|-------------------------------------------------------|"<<"\n";
@@ -1552,13 +1562,13 @@ void existing(char* id,char* pass)
 
 				  }
 				  cout<<"\n|-------------------------------------------------------|"<<"\n\n";
-				  cout<<"Do you want to return the cd ??(y/n)";
+				  cout<<"Do you want to return the cd ?(y/n)";
 				  cin>>rep;
 				  if(rep=='y')
 				  { temp.rdate=master.getdate();
 				    if(temp.diff(temp.rdate,temp.bdate)>20)
 				    {
-				    clrscr();
+				    system("cls");
 				    master.profit((temp.diff(temp.rdate,temp.bdate)-20),temp.borrow,'p');
 				    }
 				    cout<<"Thanks for using cd library"<<endl;
@@ -1571,7 +1581,7 @@ void existing(char* id,char* pass)
 	    else if(choice==3)
 	    while(1)
 	    {   char f='n',ch;
-		clrscr();
+		system("cls");
 		cout<<"\t\t  "<<"________________________________________"<<endl;
 		cout<<endl<<"\t\t\t  "<<"Account Settings !!"<<endl;
 		cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1600,7 +1610,7 @@ void existing(char* id,char* pass)
 		     ctr1++;
 		   }
 		   if(ctr1==1)
-		    { clrscr();
+		    { system("cls");
 		      cout<<"\t\t  "<<"________________________________________"<<endl;
 		      cout<<endl<<"\t\t\t  "<<"Account Settings !!"<<endl;
 		      cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1610,7 +1620,7 @@ void existing(char* id,char* pass)
 		      cout<<"3. Done                      "<<endl;
 		    }
 		   if(ctr1==2)
-		    { clrscr();
+		    { system("cls");
 		      cout<<"\t\t  "<<"________________________________________"<<endl;
 		      cout<<endl<<"\t\t\t  "<<"Account Settings !!"<<endl;
 		      cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1620,7 +1630,7 @@ void existing(char* id,char* pass)
 		      cout<<"3. Done                      "<<endl;
 		    }
 		   if(ctr1==3)
-		   { clrscr();
+		   { system("cls");
 		      cout<<"\t\t  "<<"________________________________________"<<endl;
 		      cout<<endl<<"\t\t\t  "<<"Account Settings !!"<<endl;
 		      cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1643,7 +1653,7 @@ void existing(char* id,char* pass)
 		 {
 		    if(temp.deactivate=='n')
 		    {
-		    cout<<"account is activated - do you want to deactivate ?? (y/n)";
+		    cout<<"account is activated - do you want to deactivate ? (y/n)";
 		    cin>>f;
 		    }
 		    if(f=='y')
@@ -1654,6 +1664,7 @@ void existing(char* id,char* pass)
 		    }
 		    if (temp.deactivate=='y')
 		    cout<<"your account is already deactivated";
+		    getch();
 		 }
 		 if(choice1==3)
 		 {
@@ -1678,28 +1689,28 @@ void existing(char* id,char* pass)
 	}
 }
 /*____________________________________________________________________________
-  ____________________________________________________________________________
+  ____________________________________________________________________________*/
 
 	      /*--------------------------------------------
-		  Function to perform administrative tasks
-		--------------------------------------------*/
+		  		Function to perform administrative tasks
+				--------------------------------------------*/
 
 void admin()
 {     char pin[10];
       // Enter admin password
-
+			int i;
       cout<<endl<<endl<<"\t     \t"<<"Enter administrator password  : ";
 
-      for(int i=0;i<5;i++)
+      for(i=0;i<5;i++)
       {
       pin[i]=getch();
 
       if((int)pin[i]==8)      ////////////////////////////////////////
       {                       // This statement gives compatability //
-	if(i>0)               //          for backspaces            //
-	{                     ////////////////////////////////////////
+	if(i>0)               			//          for backspaces            //
+	{                     			////////////////////////////////////////
 	 cout<<"\b \b";
-	 i--;             // To delete the previous charachter
+	 i--;             			// To delete the previous charachter
 	}
       i--;                // Cursor must not be moved if backspace is entered
       }
@@ -1709,8 +1720,8 @@ void admin()
       pin[i]='\0';
 
 
-     if(strcmpi(pin,"admin")!=0)
-     {clrscr();
+     if(strcmp(pin,"admin")!=0)
+     {system("cls");
       cout<<"\n\n\n\n";
       cout<<"\t\t  "<<"________________________________________"<<endl;
       cout<<endl<<"\t\t\t  "<<"Access  forbidden  !!!!!"<<endl;
@@ -1724,11 +1735,11 @@ void admin()
      char ch;
      while(1)
 	{       /*--------------------------------------------
-		      CREATES THE Graphical User Interface
-				  for admin
+		      		CREATES THE Graphical User Interface
+				  							for admin
 		  --------------------------------------------*/
 		ch='a';  //This can be any thing except ch=13 (ascii value)
-		clrscr();
+		system("cls");
 		cout<<"\t\t  "<<"________________________________________"<<endl;
 		cout<<endl<<"\t\t\t  "<<"Perform admin tasks !!"<<endl;
 		cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1757,7 +1768,7 @@ void admin()
 		  }
 		  if(ctr==1)
 		   {
-			clrscr();
+			system("cls");
 			cout<<"\t\t  "<<"________________________________________"<<endl;
 			cout<<endl<<"\t\t\t  "<<"Perform admin tasks !!"<<endl;
 			cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1772,7 +1783,7 @@ void admin()
 		   }
 		  if(ctr==2)
 		   {
-			clrscr();
+			system("cls");
 			cout<<"\t\t  "<<"________________________________________"<<endl;
 			cout<<endl<<"\t\t\t  "<<"Perform admin tasks !!"<<endl;
 			cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1787,7 +1798,7 @@ void admin()
 		   }
 		  if(ctr==3)
 		   {
-			clrscr();
+			system("cls");
 			cout<<"\t\t  "<<"________________________________________"<<endl;
 			cout<<endl<<"\t\t\t  "<<"Perform admin tasks !!"<<endl;
 			cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1802,7 +1813,7 @@ void admin()
 		   }
 		  if(ctr==4)
 		   {
-			clrscr();
+			system("cls");
 			cout<<"\t\t  "<<"________________________________________"<<endl;
 			cout<<endl<<"\t\t\t  "<<"Perform admin tasks !!"<<endl;
 			cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1816,7 +1827,7 @@ void admin()
 		   }
 		 if(ctr==5)
 		   {
-			clrscr();
+			system("cls");
 			cout<<"\t\t  "<<"________________________________________"<<endl;
 			cout<<endl<<"\t\t\t  "<<"Perform admin tasks !!"<<endl;
 			cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1831,7 +1842,7 @@ void admin()
 		   }
 		 if(ctr==6)
 		   {
-			clrscr();
+			system("cls");
 			cout<<"\t\t  "<<"________________________________________"<<endl;
 			cout<<endl<<"\t\t\t  "<<"Perform admin tasks !!"<<endl;
 			cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1856,10 +1867,10 @@ void admin()
 				  if(n==0)
 				  {
 				  cout<<"no users!!";
-				  clrscr();
+				  system("cls");
 				  return;
 				  }
-				  clrscr();
+				  system("cls");
 				  fstream a;
 				  store temp;
 				  a.open("users.dat",ios::binary|ios::in);
@@ -1879,13 +1890,13 @@ void admin()
 				  temp.display('a');
 				  cout<<"hit any key to continue";
 				  getch();
-				  clrscr();
+				  system("cls");
 				 }
 				}
 			break;
 			case 2:
 				{char choice;
-				 cout<<" you sure u wanna delete all users?? (y/n) :";
+				 cout<<" you sure u wanna delete all users? (y/n) :";
 				 cin>>choice;
 				 if(choice=='y')
 				 {
@@ -1893,11 +1904,11 @@ void admin()
 				 cout<<"removed all users !!!";
 				 }
 				 getch();
-				 clrscr();
+				 system("cls");
 				}
 			break;
 			case 3:
-				{ clrscr();
+				{ system("cls");
 				  cout<<"\n\n\n\n";
 				  cout<<"\t\t  "<<"    ________________________________________"<<endl;
 				  cout<<endl<<"\t\t\t"<<"            PROFIT REPORT !!          "<<endl;
@@ -1918,7 +1929,7 @@ void admin()
 
 
 
-				 clrscr();
+				 system("cls");
 		cout<<"\t\t  "<<"________________________________________"<<endl;
 		cout<<endl<<"\t\t\t\t  "<<"Manage songs !!"<<endl;
 		cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1945,7 +1956,7 @@ void admin()
 		    ctr5++;
 		  }
 		  if(ctr5==1)
-		   { clrscr();
+		   { system("cls");
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
 		     cout<<endl<<"\t\t\t\t  "<<"Manage songs !!"<<endl;
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1957,7 +1968,7 @@ void admin()
 
 		   }
 		  if(ctr5==2)
-		   { clrscr();
+		   { system("cls");
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
 		     cout<<endl<<"\t\t\t\t  "<<"Manage songs !!"<<endl;
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1970,7 +1981,7 @@ void admin()
 
 		   }
 		  if(ctr5==3)
-		   { clrscr();
+		   { system("cls");
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
 		     cout<<endl<<"\t\t\t\t  "<<"Manage songs !!"<<endl;
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -1982,7 +1993,7 @@ void admin()
 
 		   }
 		  if(ctr5==4)
-		   { clrscr();
+		   { system("cls");
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
 		     cout<<endl<<"\t\t\t\t  "<<"Manage songs !!"<<endl;
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -2006,7 +2017,7 @@ void admin()
 
 
 				  if(x==2)
-				  {     clrscr();
+				  {     system("cls");
 					char sch[50];
 					int c1=0;
 					cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -2018,7 +2029,7 @@ void admin()
 					sch[c1]=ch;
 
 					while(1)
-					{clrscr();
+					{system("cls");
 					 c1++;
 					 sch[c1]='\0';
 					 cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -2040,7 +2051,7 @@ void admin()
 				  }
 				  if(x==3)
 				  {char ch='n';
-				   cout<<"Are you sure that you want to delete all songs ??(Y/N)";
+				   cout<<"Are you sure that you want to delete all songs ?(Y/N)";
 				   cin>>ch;
 				   if(ch=='y')
 				   {
@@ -2048,7 +2059,7 @@ void admin()
 				   cout<<"removed all songs !!!";
 				   }
 				   getch();
-				   clrscr();
+				   system("cls");
 				  }
 
 				  if(x==4)
@@ -2057,13 +2068,13 @@ void admin()
 				}
 			break;
 			case 5: {char reply;
-				 clrscr();
+				 system("cls");
 				 cout<<"\t\t  "<<"________________________________________"<<endl;
 				 cout<<endl<<"\t\t\t      "<<"Settings --->Date "<<endl;
 				 cout<<"\t\t  "<<"________________________________________"<<endl<<endl;
 				 cout<<"\n\t\t  "<<"The current system date is:";
 				 master.showdate();
-				 cout<<"\n\n\t\t  "<<"Do you want to adjust the date ?? (y/n) > <\b\b";
+				 cout<<"\n\n\t\t  "<<"Do you want to adjust the date ? (y/n) > <\b\b";
 				 reply=getche();
 				 if(reply=='y')
 				 {
@@ -2087,8 +2098,8 @@ void admin()
 
 
 
-void main()
-{       clrscr();
+int main()
+{       system("cls");
 
 	obtain();
 	int choice;
@@ -2099,7 +2110,7 @@ void main()
 		      CREATES THE Graphical User Interface
 		  --------------------------------------------*/
 		ch='a';  //This can be any thing except ch=13 (ascii value)
-		clrscr();
+		system("cls");
 		cout<<"\t\t  "<<"________________________________________"<<endl;
 		cout<<endl<<"\t\t\t  "<<"Welcome to CD library !!"<<endl;
 		cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -2126,7 +2137,7 @@ void main()
 		    ctr++;
 		  }
 		  if(ctr==1)
-		   { clrscr();
+		   { system("cls");
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
 		     cout<<endl<<"\t\t\t  "<<"Welcome to CD library !!"<<endl;
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -2137,7 +2148,7 @@ void main()
 		     cout<<"4. Exit               "<<endl;
 		   }
 		  if(ctr==2)
-		   { clrscr();
+		   { system("cls");
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
 		     cout<<endl<<"\t\t\t  "<<"Welcome to CD library !!"<<endl;
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -2150,7 +2161,7 @@ void main()
 
 		   }
 		  if(ctr==3)
-		   { clrscr();
+		   { system("cls");
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
 		     cout<<endl<<"\t\t\t  "<<"Welcome to CD library !!"<<endl;
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -2161,7 +2172,7 @@ void main()
 		     cout<<"4. Exit               "<<endl;
 		   }
 		  if(ctr==4)
-		   { clrscr();
+		   { system("cls");
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
 		     cout<<endl<<"\t\t\t  "<<"Welcome to CD library !!"<<endl;
 		     cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -2177,13 +2188,12 @@ void main()
 		ctr=1;
 		/*----------------------------------------------
 		       Switching Control to various functions
-
-			  from the data entered in the GUI
+			  	   from the data entered in the GUI
 		  ----------------------------------------------*/
 		  switch(choice)
 		{
 			case 1:
-				{	clrscr();
+				{	system("cls");
 					cout<<"\t\t  "<<"________________________________________"<<endl;
 					cout<<endl<<"\t\t  "<<"          REGISTRATION PORTAL"<<endl;
 					cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -2193,7 +2203,7 @@ void main()
 				}
 			break;
 			case 2:
-			{ clrscr();
+			{ system("cls");
 				cout<<"\t\t  "<<"________________________________________"<<endl;
 			  cout<<endl<<"\t\t  "<<"                 LOGIN"<<endl;
 				cout<<"\t\t  "<<"________________________________________"<<endl;
@@ -2203,16 +2213,17 @@ void main()
 				cin>>id;
      // Enter the password -----------------------------------------------
 				cout<<endl<<"\t\t\t"<<"Enter 5 digit pin          \t: ";
-				for(int i=0;i<5;i++)
+				int i;
+				for(i=0;i<5;i++)
 				{
 				 pass[i]=getch();
 
-				 if((int)pass[i]==8)    ////////////////////////////////////////
-				 {                       // This statement gives compatability //
+				 if((int)pass[i]==8)     ////////////////////////////////////////
+				 {                       // This statement gives compatab                                                                                                                                        ility //
 				   if(i>0)               //          for backspaces            //
 				   {                     ////////////////////////////////////////
 				   cout<<"\b \b";
-				   i--;             // To delete the previous charachter
+				   i--;              // To delete the previous charachter
 				   }
 				 i--;                // Cursor must not be moved if backspace is entered
 				 }
@@ -2236,4 +2247,5 @@ void main()
 		cout<<endl;
 
 	}
+	return 0;
 }
